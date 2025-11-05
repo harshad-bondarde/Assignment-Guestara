@@ -17,7 +17,7 @@ router.put("/subcategory/edit/:id",editSubCategory);
 router.post("/categories/:categoryId/items", createItem);
 router.post("/categories/:categoryId/subcategories/:subCategoryId/items", createItem); //since subcategoryid is optional 
 router.get("/items",getAllItems); //all items
-router.get("/item-details",getItemDetails); //with all attributes
+router.get("/item-details/:id",getItemDetails); //with all attributes
 router.get("/category/items/:categoryid",getItemsUnderCategory);
 router.get("/subcategory/items/:subcategoryid",getItemsUnderSubCategory);
 router.put("/items/edit/:id",editItem);

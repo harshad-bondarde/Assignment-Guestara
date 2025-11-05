@@ -2,8 +2,8 @@ const express=require("express");
 const app=express();
 const dotenv=require("dotenv")
 const connectDB=require("./db/index")
-const PORT=3000
 const mainRouter=require("./routes/index")
+const PORT=process.env.PORT || 3000;
 const cors=require("cors")
 dotenv.config()
 
@@ -14,7 +14,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use("/",mainRouter)
+app.use("/api/",mainRouter)
 
 app.listen(PORT,()=>{
     connectDB()

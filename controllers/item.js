@@ -70,8 +70,9 @@ const getItemDetails=async(req,res)=>{
 }
 
 const getItemsUnderCategory=async(req,res)=>{   
-    const categoryId=req.params.categoryId
+    const categoryId=req.params.categoryid
     try {
+        console.log("Category ID:", categoryId); // Debug log
         const items=await Item.find({categoryId:categoryId})
         return res.status(200).json({
             items

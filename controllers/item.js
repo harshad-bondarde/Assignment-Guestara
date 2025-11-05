@@ -8,14 +8,14 @@ const createItem=async(req,res)=>{
                 message:"Name and BaseAmount are required"
             })
         }
-        // Ensure at least one hierarchy field present
+        // Atlease one should be present
         if (!categoryId && !subCategoryId) {
         return res.status(400).json({
             message: "Either categoryId or subCategoryId is required"
         });
         }
 
-        // If subCategoryId exists, categoryId MUST exist too (sub belongs to category)
+        // If both are not there
         if (subCategoryId && !categoryId) {
         return res.status(400).json({
             message: "CategoryId is required when SubCategoryId is provided"
@@ -72,7 +72,7 @@ const getItemDetails=async(req,res)=>{
 const getItemsUnderCategory=async(req,res)=>{   
     const categoryId=req.params.categoryid
     try {
-        console.log("Category ID:", categoryId); // Debug log
+        console.log("Category ID:", categoryId);
         const items=await Item.find({categoryId:categoryId})
         return res.status(200).json({
             items

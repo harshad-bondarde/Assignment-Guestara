@@ -25,6 +25,7 @@ const itemSchema=new mongoose.Schema({
     TotalAmount:{
         type:Number
     },
+    // since items can be belong to either category or subcategory
     subCategoryId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"SubCategory"

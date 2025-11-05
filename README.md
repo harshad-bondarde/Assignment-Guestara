@@ -1,29 +1,36 @@
 
-# Guesatara-Assignment
+# Guestara Assignment ✅
 
-CabApp is a comprehensive cab booking application built using the PERN stack (PostgreSQL, Express.js, React, Node.js) and integrated with MapBox API. It enables users to register, book rides, and manage their journeys efficiently.
+This is a **Menu Management Backend Application** built using **Node.js, Express, and MongoDB**.  
+It allows creation and management of **Categories, Sub-categories, and Items** with tax settings and price calculations.
+
+---
 
 ## ✨ Features
--Create, edit, and retrieve product categories with tax configuration and descriptions.
--Organize menu structure by adding sub-categories under categories with inherited tax settings.
--Add and manage items with price, discount, tax applicability, and category/sub-category mapping.
--Automatically computes final price based on base amount and discount logic.
--Supports items under both categories and sub-categories for scalable menu organization.
--Search items by name to quickly locate products in the system.
--Well-structured CRUD APIs following REST principles for clean and maintainable backend logic.
--Schema-based data modeling, validation, and relationship handling with MongoDB Atlas support.
 
-## Tech Stack 🚀
- 
-**Framework :** Nodejs 
+- Create, edit, and retrieve categories with tax configuration
+- Add sub-categories under categories with inherited tax settings
+- Manage items with base price, discount, and tax applicability
+- Auto-calculate final price (BaseAmount − Discount)
+- Flexible menu structure (items can belong to category or sub-category)
+- Search items by name
+- RESTful CRUD APIs with clean architecture
+- MongoDB + Mongoose schema validation & relationships
+- Environment variables for secure configuration
 
-**Database :** Mongodb
+---
 
-**Server :** Nodejs , Expressjs
+## 🧠 Tech Stack
 
+| Layer | Technology |
+|------|-----------|
+| Runtime | Node.js |
+| Framework | Express.js |
+| Database | MongoDB (Mongoose ODM) |
+| Deployment | Render |
+| API Testing | Postman |
 
-
-
+---
 
 
 ## Installation 🛠️
